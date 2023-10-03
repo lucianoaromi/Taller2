@@ -22,19 +22,7 @@ namespace CapaPresentacion
         private static IconMenuItem MenuActivo = null;
         //Indica el formulario activo en el panel
         private static Form FormularioActivo = null;
-
-/*
-        //Editado para no tener que loguearse cada momento 
-       
-        public Inicio(Usuario objusuario = null)
-        {
-            if(objusuario == null) 
-               usuarioActual = new Usuario() { NombreCompleto = "ADM Predefinido",IdUsuario = 2};
-            else
-               usuarioActual=objusuario;
-               InitializeComponent();
-        }
-*/       
+      
         
         public Inicio(Usuario objusuario)
         {

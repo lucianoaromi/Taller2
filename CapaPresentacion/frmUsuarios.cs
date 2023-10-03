@@ -78,6 +78,7 @@ namespace CapaPresentacion
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
+
             string mensaje = string.Empty;
             Usuario objusuario = new Usuario()
             {
