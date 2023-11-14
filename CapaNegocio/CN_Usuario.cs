@@ -12,10 +12,10 @@ namespace CapaNegocio
 {
     public class CN_Usuario
     {
-        // "objcd_usuario" es una instancia de la clase CD_Usuario
+        // "objcd_usuario" es una instancia de la clase CD_Usuario llamada objcd_usuario
         private CD_Usuario objcd_usuario = new CD_Usuario();
 
-
+        //Mismo metodo "Listar" que se halla en la clase CD_Usuario de la capa de datos
         //Retorna la lista que posee la clase "CD_Usuario" que se encuentra en la capa de datos
         public List<Usuario> Listar()
         {
@@ -28,23 +28,36 @@ namespace CapaNegocio
         {
             Mensaje = string.Empty;
 
-            if (obj.Documento == "")
+            if (string.IsNullOrEmpty(obj.Documento))
             {
                 Mensaje += "Es necesario el documento\n";
             }
-
-            if (obj.NombreCompleto == "")
+            else if (obj.Documento.Length != 8 || !EsNumero(obj.Documento))
             {
-                Mensaje += "Es necesario el nombre del usuario\n";
+                Mensaje += "El número de documento debe tener exactamente 8 dígitos numéricos\n";
             }
 
-            if (obj.Clave == "")
+            if (string.IsNullOrEmpty(obj.Apellido))
+            {
+                Mensaje += "Es necesario el Apellido del usuario\n";
+            }
+
+            if (string.IsNullOrEmpty(obj.Nombre))
+            {
+                Mensaje += "Es necesario el Nombre del usuario\n";
+            }
+
+            if (string.IsNullOrEmpty(obj.Direccion))
+            {
+                Mensaje += "Es necesario la Direccion del usuario\n";
+            }
+
+            if (string.IsNullOrEmpty(obj.Clave))
             {
                 Mensaje += "Es necesario la clave del usuario\n";
             }
 
-
-            if(Mensaje != string.Empty)
+            if (Mensaje != string.Empty)
             {
                 return 0;
             }
@@ -52,9 +65,20 @@ namespace CapaNegocio
             {
                 return objcd_usuario.Registrar(obj, out Mensaje);
             }
-            
-
         }
+
+        private bool EsNumero(string valor)
+        {
+            foreach (char c in valor)
+            {
+                if (!char.IsDigit(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
         //Puente de comunicacion con la "Capa de Presentacion"
         public bool Editar(Usuario obj, out string Mensaje)
@@ -66,9 +90,19 @@ namespace CapaNegocio
                 Mensaje += "Es necesario el documento\n";
             }
 
-            if (obj.NombreCompleto == "")
+            if (obj.Apellido == "")
             {
-                Mensaje += "Es necesario el nombre del usuario\n";
+                Mensaje += "Es necesario el Apellido del usuario\n";
+            }
+
+            if (obj.Nombre == "")
+            {
+                Mensaje += "Es necesario el Nombre del usuario\n";
+            }
+
+            if (obj.Direccion == "")
+            {
+                Mensaje += "Es necesario la Direccion del usuario\n";
             }
 
             if (obj.Clave == "")

@@ -16,15 +16,22 @@ namespace CapaDatos
         // Metodo que permite listar todos los usuarios desde la base de datos
         public List<Usuario> Listar()
         {
+            //Genera la variable de tipo Lista que contiene Usuarios
             List<Usuario> lista = new List<Usuario>();
 
+            //Conecta a la base por medio de la "cadena de conexion" -> (Conexiones.(clase en la capa de datos))
             using (SqlConnection oconexion = new SqlConnection(Conexion.cadena))
             {
+                
+                //Capturador de errores por si falla la conexion a la BD
                 try
                 {
                     StringBuilder  query = new StringBuilder();
 
-                    query.AppendLine("select u.IdUsuario,u.Documento,u.NombreCompleto,u.Correo,u.Clave,u.Estado,r.IdRol,r.Descripcion from usuario u");
+                    //Consulta a la BD la tabla Usuario y Rol, relacionando su IdRol
+                    query.AppendLine("select u.IdUsuario,u.Documento,u.Apellido,u.Nombre,u.Direccion,u.Correo,u.Clave,u.Estado,r.IdRol,r.Descripcion from usuario u");
+                    
+                    //r y u son objetos de tipo Rol y Usuario respectivamente
                     query.AppendLine("inner join rol r on r.IdRol = u.IdRol");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
@@ -32,18 +39,26 @@ namespace CapaDatos
 
                     oconexion.Open();
 
+                    //Lee el resultado del comando anterior
+                    //Crea un objeto SqlDataReader llamado "dr" que se utiliza para leer, procesar y guardar los resultados de la consulta.
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         while (dr.Read())
                         {
+                            // crea un nuevo objeto de la clase Usuario, y agrega a la lista "lista".
                             lista.Add(new Usuario()
                             {
                                 IdUsuario = Convert.ToInt32(dr["IdUsuario"]),
                                 Documento = dr["Documento"].ToString(),
-                                NombreCompleto = dr["NombreCompleto"].ToString(),
+                                Apellido = dr["Apellido"].ToString(),
+                                Nombre = dr["Nombre"].ToString(),
+                                Direccion = dr["Direccion"].ToString(),
                                 Correo = dr["Correo"].ToString(),
                                 Clave = dr["Clave"].ToString(),
                                 Estado = Convert.ToBoolean(dr["Estado"]),
+
+                                //Crea una instancia de la clase Rol y establece
+                                //sus propiedades IdRol y Descripcion con valores leídos desde un objeto SqlDataReader
                                 oRol = new Rol() { IdRol = Convert.ToInt32(dr["IdRol"]),Descripcion = dr["Descripcion"].ToString()}
 
                             });
@@ -51,6 +66,7 @@ namespace CapaDatos
                     }
 
                 }
+                //si se produce una excepción se crea una nueva lista de usuarios, se garantiza que lista esté en un estado válido y vacío
                 catch (Exception ex)
                 {
 
@@ -80,7 +96,9 @@ namespace CapaDatos
                    
                     //Parametros de entrada
                     cmd.Parameters.AddWithValue("Documento",obj.Documento);
-                    cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
+                    cmd.Parameters.AddWithValue("Apellido", obj.Apellido);
+                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("Direccion", obj.Nombre);
                     cmd.Parameters.AddWithValue("Correo", obj.Correo);
                     cmd.Parameters.AddWithValue("Clave", obj.Clave);
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
@@ -131,7 +149,9 @@ namespace CapaDatos
                     //Parametros de entrada
                     cmd.Parameters.AddWithValue("IdUsuario", obj.IdUsuario);
                     cmd.Parameters.AddWithValue("Documento", obj.Documento);
-                    cmd.Parameters.AddWithValue("NombreCompleto", obj.NombreCompleto);
+                    cmd.Parameters.AddWithValue("Apellido", obj.Apellido);
+                    cmd.Parameters.AddWithValue("Nombre", obj.Nombre);
+                    cmd.Parameters.AddWithValue("Direccion", obj.Direccion);
                     cmd.Parameters.AddWithValue("Correo", obj.Correo);
                     cmd.Parameters.AddWithValue("Clave", obj.Clave);
                     cmd.Parameters.AddWithValue("IdRol", obj.oRol.IdRol);
