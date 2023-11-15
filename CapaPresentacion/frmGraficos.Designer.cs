@@ -82,9 +82,10 @@
             this.dtpStartDate.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtpStartDate.CustomFormat = "MMM dd, yyyy";
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(659, 104);
+            this.dtpStartDate.Location = new System.Drawing.Point(879, 128);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(109, 20);
+            this.dtpStartDate.Size = new System.Drawing.Size(144, 22);
             this.dtpStartDate.TabIndex = 0;
             // 
             // dtpEndDate
@@ -92,18 +93,20 @@
             this.dtpEndDate.CalendarTrailingForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dtpEndDate.CustomFormat = "MMM dd, yyyy";
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(781, 104);
+            this.dtpEndDate.Location = new System.Drawing.Point(1041, 128);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(109, 20);
+            this.dtpEndDate.Size = new System.Drawing.Size(144, 22);
             this.dtpEndDate.TabIndex = 1;
             // 
             // lblTotalProfit
             // 
             this.lblTotalProfit.AutoSize = true;
             this.lblTotalProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalProfit.Location = new System.Drawing.Point(10, 16);
+            this.lblTotalProfit.Location = new System.Drawing.Point(13, 20);
+            this.lblTotalProfit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalProfit.Name = "lblTotalProfit";
-            this.lblTotalProfit.Size = new System.Drawing.Size(67, 25);
+            this.lblTotalProfit.Size = new System.Drawing.Size(83, 29);
             this.lblTotalProfit.TabIndex = 9;
             this.lblTotalProfit.Text = "10000";
             // 
@@ -140,7 +143,8 @@
             legend3.TitleForeColor = System.Drawing.Color.White;
             legend3.TitleSeparatorColor = System.Drawing.Color.White;
             this.chartGrossRevenue.Legends.Add(legend3);
-            this.chartGrossRevenue.Location = new System.Drawing.Point(5, 18);
+            this.chartGrossRevenue.Location = new System.Drawing.Point(7, 22);
+            this.chartGrossRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartGrossRevenue.Name = "chartGrossRevenue";
             series3.BackImageTransparentColor = System.Drawing.Color.White;
             series3.BackSecondaryColor = System.Drawing.Color.White;
@@ -152,7 +156,7 @@
             series3.MarkerColor = System.Drawing.Color.Gray;
             series3.Name = "Series1";
             this.chartGrossRevenue.Series.Add(series3);
-            this.chartGrossRevenue.Size = new System.Drawing.Size(613, 187);
+            this.chartGrossRevenue.Size = new System.Drawing.Size(817, 230);
             this.chartGrossRevenue.TabIndex = 12;
             this.chartGrossRevenue.Text = "chart1";
             // 
@@ -186,7 +190,8 @@
             legend4.TitleForeColor = System.Drawing.Color.White;
             legend4.TitleSeparatorColor = System.Drawing.Color.White;
             this.chartTopProducts.Legends.Add(legend4);
-            this.chartTopProducts.Location = new System.Drawing.Point(5, 15);
+            this.chartTopProducts.Location = new System.Drawing.Point(7, 18);
+            this.chartTopProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartTopProducts.Name = "chartTopProducts";
             series4.BackImageTransparentColor = System.Drawing.Color.Gray;
             series4.BackSecondaryColor = System.Drawing.Color.DimGray;
@@ -219,7 +224,7 @@
             series4.Name = "Series1";
             series4.ShadowColor = System.Drawing.Color.White;
             this.chartTopProducts.Series.Add(series4);
-            this.chartTopProducts.Size = new System.Drawing.Size(391, 416);
+            this.chartTopProducts.Size = new System.Drawing.Size(521, 512);
             this.chartTopProducts.TabIndex = 13;
             this.chartTopProducts.Text = "chart2";
             title2.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -233,20 +238,22 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(2, 104);
+            this.label10.Location = new System.Drawing.Point(3, 128);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(161, 13);
+            this.label10.Size = new System.Drawing.Size(132, 16);
             this.label10.TabIndex = 12;
-            this.label10.Text = "Numero de Productos Diferentes";
+            this.label10.Text = "Productos Diferentes";
             // 
             // lblNumProducts
             // 
             this.lblNumProducts.AutoSize = true;
             this.lblNumProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumProducts.ForeColor = System.Drawing.Color.White;
-            this.lblNumProducts.Location = new System.Drawing.Point(21, 126);
+            this.lblNumProducts.Location = new System.Drawing.Point(28, 155);
+            this.lblNumProducts.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumProducts.Name = "lblNumProducts";
-            this.lblNumProducts.Size = new System.Drawing.Size(67, 25);
+            this.lblNumProducts.Size = new System.Drawing.Size(83, 29);
             this.lblNumProducts.TabIndex = 11;
             this.lblNumProducts.Text = "10000";
             // 
@@ -254,9 +261,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(2, 41);
+            this.label7.Location = new System.Drawing.Point(3, 50);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.Size = new System.Drawing.Size(125, 16);
             this.label7.TabIndex = 10;
             this.label7.Text = "Numero de Clientes";
             // 
@@ -265,9 +273,10 @@
             this.lblNumCustomers.AutoSize = true;
             this.lblNumCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumCustomers.ForeColor = System.Drawing.Color.White;
-            this.lblNumCustomers.Location = new System.Drawing.Point(21, 64);
+            this.lblNumCustomers.Location = new System.Drawing.Point(28, 79);
+            this.lblNumCustomers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumCustomers.Name = "lblNumCustomers";
-            this.lblNumCustomers.Size = new System.Drawing.Size(67, 25);
+            this.lblNumCustomers.Size = new System.Drawing.Size(83, 29);
             this.lblNumCustomers.TabIndex = 9;
             this.lblNumCustomers.Text = "10000";
             // 
@@ -277,19 +286,21 @@
             this.label14.BackColor = System.Drawing.Color.DimGray;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(29, 18);
+            this.label14.Location = new System.Drawing.Point(39, 22);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(153, 29);
+            this.label14.Size = new System.Drawing.Size(186, 36);
             this.label14.TabIndex = 14;
             this.label14.Text = "Estadisticas";
             // 
             // dgvUnderstock
             // 
             this.dgvUnderstock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnderstock.Location = new System.Drawing.Point(5, 18);
+            this.dgvUnderstock.Location = new System.Drawing.Point(7, 22);
+            this.dgvUnderstock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUnderstock.Name = "dgvUnderstock";
             this.dgvUnderstock.RowHeadersWidth = 51;
-            this.dgvUnderstock.Size = new System.Drawing.Size(435, 188);
+            this.dgvUnderstock.Size = new System.Drawing.Size(580, 231);
             this.dgvUnderstock.TabIndex = 0;
             // 
             // panel6
@@ -312,18 +323,21 @@
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Controls.Add(this.groupBox2);
             this.panel6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel6.Location = new System.Drawing.Point(19, 11);
+            this.panel6.Location = new System.Drawing.Point(25, 14);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1105, 598);
+            this.panel6.Size = new System.Drawing.Size(1473, 736);
             this.panel6.TabIndex = 18;
             // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.chartTopProducts);
             this.groupBox7.ForeColor = System.Drawing.Color.White;
-            this.groupBox7.Location = new System.Drawing.Point(682, 140);
+            this.groupBox7.Location = new System.Drawing.Point(909, 172);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(403, 440);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Size = new System.Drawing.Size(537, 542);
             this.groupBox7.TabIndex = 21;
             this.groupBox7.TabStop = false;
             // 
@@ -331,9 +345,11 @@
             // 
             this.groupBox6.Controls.Add(this.lblNumOrders);
             this.groupBox6.ForeColor = System.Drawing.Color.White;
-            this.groupBox6.Location = new System.Drawing.Point(29, 72);
+            this.groupBox6.Location = new System.Drawing.Point(39, 89);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(166, 49);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Size = new System.Drawing.Size(221, 60);
             this.groupBox6.TabIndex = 22;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cantidad de Ventas";
@@ -342,9 +358,10 @@
             // 
             this.lblNumOrders.AutoSize = true;
             this.lblNumOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumOrders.Location = new System.Drawing.Point(10, 16);
+            this.lblNumOrders.Location = new System.Drawing.Point(13, 20);
+            this.lblNumOrders.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumOrders.Name = "lblNumOrders";
-            this.lblNumOrders.Size = new System.Drawing.Size(67, 25);
+            this.lblNumOrders.Size = new System.Drawing.Size(83, 29);
             this.lblNumOrders.TabIndex = 9;
             this.lblNumOrders.Text = "10000";
             // 
@@ -352,9 +369,11 @@
             // 
             this.groupBox5.Controls.Add(this.lblTotalRevenue);
             this.groupBox5.ForeColor = System.Drawing.Color.White;
-            this.groupBox5.Location = new System.Drawing.Point(216, 72);
+            this.groupBox5.Location = new System.Drawing.Point(288, 89);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(166, 49);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(240, 60);
             this.groupBox5.TabIndex = 22;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ingresos Totales";
@@ -363,9 +382,10 @@
             // 
             this.lblTotalRevenue.AutoSize = true;
             this.lblTotalRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalRevenue.Location = new System.Drawing.Point(10, 16);
+            this.lblTotalRevenue.Location = new System.Drawing.Point(13, 20);
+            this.lblTotalRevenue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalRevenue.Name = "lblTotalRevenue";
-            this.lblTotalRevenue.Size = new System.Drawing.Size(67, 25);
+            this.lblTotalRevenue.Size = new System.Drawing.Size(83, 29);
             this.lblTotalRevenue.TabIndex = 9;
             this.lblTotalRevenue.Text = "10000";
             // 
@@ -373,9 +393,11 @@
             // 
             this.groupBox4.Controls.Add(this.lblTotalProfit);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(402, 72);
+            this.groupBox4.Location = new System.Drawing.Point(549, 89);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(166, 49);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(251, 60);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Ganancias Totales";
@@ -386,9 +408,10 @@
             this.btnOkCustomDate.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnOkCustomDate.IconColor = System.Drawing.Color.Black;
             this.btnOkCustomDate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnOkCustomDate.Location = new System.Drawing.Point(911, 100);
+            this.btnOkCustomDate.Location = new System.Drawing.Point(1215, 123);
+            this.btnOkCustomDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnOkCustomDate.Name = "btnOkCustomDate";
-            this.btnOkCustomDate.Size = new System.Drawing.Size(50, 28);
+            this.btnOkCustomDate.Size = new System.Drawing.Size(67, 34);
             this.btnOkCustomDate.TabIndex = 24;
             this.btnOkCustomDate.Text = "OK";
             this.btnOkCustomDate.UseVisualStyleBackColor = true;
@@ -400,9 +423,10 @@
             this.btnThisMonth.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnThisMonth.IconColor = System.Drawing.Color.Black;
             this.btnThisMonth.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThisMonth.Location = new System.Drawing.Point(978, 45);
+            this.btnThisMonth.Location = new System.Drawing.Point(1304, 55);
+            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(107, 28);
+            this.btnThisMonth.Size = new System.Drawing.Size(143, 34);
             this.btnThisMonth.TabIndex = 23;
             this.btnThisMonth.Text = "Meses";
             this.btnThisMonth.UseVisualStyleBackColor = true;
@@ -414,9 +438,10 @@
             this.btnLast30Days.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLast30Days.IconColor = System.Drawing.Color.Black;
             this.btnLast30Days.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLast30Days.Location = new System.Drawing.Point(865, 46);
+            this.btnLast30Days.Location = new System.Drawing.Point(1153, 57);
+            this.btnLast30Days.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast30Days.Name = "btnLast30Days";
-            this.btnLast30Days.Size = new System.Drawing.Size(107, 28);
+            this.btnLast30Days.Size = new System.Drawing.Size(143, 34);
             this.btnLast30Days.TabIndex = 22;
             this.btnLast30Days.Text = "Ultimos 30 dias";
             this.btnLast30Days.UseVisualStyleBackColor = true;
@@ -428,9 +453,10 @@
             this.btnLast7Days.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnLast7Days.IconColor = System.Drawing.Color.Black;
             this.btnLast7Days.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnLast7Days.Location = new System.Drawing.Point(750, 46);
+            this.btnLast7Days.Location = new System.Drawing.Point(1000, 57);
+            this.btnLast7Days.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLast7Days.Name = "btnLast7Days";
-            this.btnLast7Days.Size = new System.Drawing.Size(107, 28);
+            this.btnLast7Days.Size = new System.Drawing.Size(143, 34);
             this.btnLast7Days.TabIndex = 21;
             this.btnLast7Days.Text = "Ultimos 7 dias";
             this.btnLast7Days.UseVisualStyleBackColor = true;
@@ -442,9 +468,10 @@
             this.btnToday.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnToday.IconColor = System.Drawing.Color.Black;
             this.btnToday.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnToday.Location = new System.Drawing.Point(635, 46);
+            this.btnToday.Location = new System.Drawing.Point(847, 57);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(107, 28);
+            this.btnToday.Size = new System.Drawing.Size(143, 34);
             this.btnToday.TabIndex = 20;
             this.btnToday.Text = "Hoy";
             this.btnToday.UseVisualStyleBackColor = true;
@@ -456,9 +483,10 @@
             this.btnCustomDate.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCustomDate.IconColor = System.Drawing.Color.Black;
             this.btnCustomDate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCustomDate.Location = new System.Drawing.Point(972, 100);
+            this.btnCustomDate.Location = new System.Drawing.Point(1296, 123);
+            this.btnCustomDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCustomDate.Name = "btnCustomDate";
-            this.btnCustomDate.Size = new System.Drawing.Size(107, 28);
+            this.btnCustomDate.Size = new System.Drawing.Size(143, 34);
             this.btnCustomDate.TabIndex = 19;
             this.btnCustomDate.Text = "Periodos";
             this.btnCustomDate.UseVisualStyleBackColor = true;
@@ -471,9 +499,11 @@
             this.groupBox3.Controls.Add(this.lblNumProducts);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(29, 368);
+            this.groupBox3.Location = new System.Drawing.Point(39, 453);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(166, 212);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(221, 261);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Contador Total";
@@ -482,9 +512,11 @@
             // 
             this.groupBox1.Controls.Add(this.dgvUnderstock);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(216, 368);
+            this.groupBox1.Location = new System.Drawing.Point(288, 453);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 212);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(595, 261);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Productos de bajo stock";
@@ -493,9 +525,11 @@
             // 
             this.groupBox2.Controls.Add(this.chartGrossRevenue);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(29, 140);
+            this.groupBox2.Location = new System.Drawing.Point(39, 172);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(633, 212);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(844, 261);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingresos brutos";
@@ -505,17 +539,19 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.MediumTurquoise;
             this.panel2.Controls.Add(this.panel6);
-            this.panel2.Location = new System.Drawing.Point(64, 4);
+            this.panel2.Location = new System.Drawing.Point(85, 5);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1144, 618);
+            this.panel2.Size = new System.Drawing.Size(1525, 761);
             this.panel2.TabIndex = 19;
             // 
             // frmGraficos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 626);
+            this.ClientSize = new System.Drawing.Size(1712, 770);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmGraficos";
             this.Text = "frmGraficos";
             ((System.ComponentModel.ISupportInitialize)(this.chartGrossRevenue)).EndInit();

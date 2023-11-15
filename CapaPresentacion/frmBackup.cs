@@ -28,7 +28,6 @@ namespace CapaPresentacion
             txt_backup.Text = " Seleccione un destino...";
             txt_restore.Clear();
             txt_restore.Text = " Seleccione el archivo .bak";
-            txt_nombre_backup.Clear();
             btn_backup.Enabled = false;
             btn_restore.Enabled = false;
         }
@@ -41,7 +40,6 @@ namespace CapaPresentacion
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 txt_backup.Text = dlg.SelectedPath;
-                txt_nombre_backup.Enabled = true;
                 btn_backup.Enabled = true;
                 //pictureBox4.Enabled = true;
             }

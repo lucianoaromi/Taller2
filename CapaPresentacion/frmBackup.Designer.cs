@@ -39,8 +39,6 @@
             this.btn_backup = new System.Windows.Forms.Button();
             this.btn_examinar_restore = new System.Windows.Forms.Button();
             this.btn_restore = new System.Windows.Forms.Button();
-            this.txt_nombre_backup = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -210,27 +208,6 @@
             this.btn_restore.UseVisualStyleBackColor = false;
             this.btn_restore.Click += new System.EventHandler(this.btn_restore_Click);
             // 
-            // txt_nombre_backup
-            // 
-            this.txt_nombre_backup.Enabled = false;
-            this.txt_nombre_backup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombre_backup.Location = new System.Drawing.Point(212, 166);
-            this.txt_nombre_backup.Name = "txt_nombre_backup";
-            this.txt_nombre_backup.Size = new System.Drawing.Size(430, 29);
-            this.txt_nombre_backup.TabIndex = 55;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(79, 169);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(126, 21);
-            this.label6.TabIndex = 56;
-            this.label6.Text = "Nombre archivo:";
-            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
@@ -256,9 +233,7 @@
             this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnLimpiar);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_nombre_backup);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.btn_restore);
             this.panel1.Controls.Add(this.label3);
@@ -313,8 +288,6 @@
         private System.Windows.Forms.Button btn_backup;
         private System.Windows.Forms.Button btn_examinar_restore;
         private System.Windows.Forms.Button btn_restore;
-        private System.Windows.Forms.TextBox txt_nombre_backup;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
