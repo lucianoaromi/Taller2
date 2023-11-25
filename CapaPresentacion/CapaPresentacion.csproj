@@ -227,6 +227,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Utilidades\OpcionCombo.cs" />
     <EmbeddedResource Include="frmBackup.resx">
       <DependentUpon>frmBackup.cs</DependentUpon>

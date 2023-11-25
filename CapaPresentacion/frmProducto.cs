@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
+
     public partial class frmProducto : Form
     {
+
         public frmProducto()
         {
             InitializeComponent();
+
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
@@ -77,7 +81,7 @@ namespace CapaPresentacion
         }
 
 
-        private void buttonGuardar_Click(object sender, EventArgs e)
+        private void buttonGuardar_Click_1(object sender, EventArgs e)
         {
 
             string mensaje = string.Empty;
@@ -179,16 +183,16 @@ namespace CapaPresentacion
         {
             if (Convert.ToInt32(txtid.Text) != 0)
             {
-                if (MessageBox.Show("¿Desea eliminar el usuario?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("¿Desea eliminar el Producto?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string mensaje = string.Empty;
-                    Producto objproducto = new Producto()
+                    Producto obj = new Producto()
                     {
                         IdProducto = Convert.ToInt32(txtid.Text)
                     };
 
 
-                    bool respuesta = new CN_Producto().Eliminar(objproducto, out mensaje);
+                    bool respuesta = new CN_Producto().Eliminar(obj, out mensaje);
 
                     if (respuesta)
                     {
@@ -262,8 +266,8 @@ namespace CapaPresentacion
                 {
 
                     txtindice.Text = indice.ToString();
-
                     txtid.Text = dgvdata.Rows[indice].Cells["Id"].Value.ToString();
+
                     txtcodigo.Text = dgvdata.Rows[indice].Cells["Codigo"].Value.ToString();
                     txtnombre.Text = dgvdata.Rows[indice].Cells["Nombre"].Value.ToString();
                     txtdescripcion.Text = dgvdata.Rows[indice].Cells["Descripcion"].Value.ToString();
@@ -308,5 +312,9 @@ namespace CapaPresentacion
                 row.Visible = true;
             }
         }
+
+
+
+
     }
 }

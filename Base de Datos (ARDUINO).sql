@@ -564,12 +564,12 @@ begin
 
 	 if exists (select * from DETALLE_VENTA dv
 	 inner join PRODUCTO p on p.IdProducto = dv.IdProducto
-	 where p.IdProducto = @IdProducto
+	 where dv.IdProducto = @IdProducto
 	 )
 	 begin 
 	    set @pasoreglas = 0
         set @Respuesta = 0
-	    set @Mensaje = @Mensaje + 'No se puede eliminar el producto por que se encuentra relacionado a una VENTA\n'
+	    set @Mensaje = @Mensaje + 'No se puede eliminar el producto por que se encuentra relacionado a una VENTA'
      end
 
 	 if(@pasoreglas = 1)

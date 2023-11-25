@@ -31,7 +31,7 @@ namespace CapaDatos
                     //Consulta a la BD la tabla Usuario y Rol, relacionando su IdRol
                     query.AppendLine("select IdProducto,Codigo,Nombre,p.Descripcion,c.IdCategoria,c.Descripcion[DescripcionCategoria],p.Stock,p.Precio,p.Estado from PRODUCTO p");
 
-                    //r y u son objetos de tipo Rol y Usuario respectivamente
+                    // 
                     query.AppendLine("inner join CATEGORIA c on c.IdCategoria = p.IdCategoria");
 
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
@@ -198,7 +198,7 @@ namespace CapaDatos
                     cmd.Parameters.AddWithValue("IdProducto", obj.IdProducto);
 
                     //Parametros de salida
-                    cmd.Parameters.Add("Repuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
 
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -206,7 +206,7 @@ namespace CapaDatos
 
                     cmd.ExecuteNonQuery();
 
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Repuesta"].Value);
+                    respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
                     Mensaje = cmd.Parameters["Mensaje"].Value.ToString();
                 }
             }

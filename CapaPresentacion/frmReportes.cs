@@ -43,6 +43,9 @@ namespace CapaPresentacion
             cbobusqueda.ValueMember = "Valor";
             cbobusqueda.SelectedIndex = 0;
             lblidusuario.Text = Convert.ToString(_Usuario.IdUsuario);
+            lblidrol.Text = Convert.ToString(_Usuario.oRol.IdRol);
+            lblapeusuario.Text = Convert.ToString(_Usuario.Apellido);
+
 
         }
 
@@ -59,28 +62,32 @@ namespace CapaPresentacion
 
             foreach (ReporteVenta rv in lista)
             {
-                dgvdata.Rows.Add(new object[]
+                // Verifica las condiciones antes de agregar la fila
+                if (lblidrol.Text == "2" || lblapeusuario.Text == rv.UsuarioRegistro)
                 {
-                    rv.FechaRegistro,
-                    rv.TipoDocumento,
-                    rv.NumeroDocumento,
-                    rv.MontoTotal,
-                    rv.UsuarioRegistro,
-                    rv.DocumentoCliente,
-                    rv.ApellidoCliente,
-                    rv.CodigoProducto,
-                    rv.NombreProducto,
-                    rv.Categoria,
-                    rv.Precio,
-                    rv.Cantidad,
-                    rv.SubTotal,
-                    rv.DesMetPago
-                });
-
+                    dgvdata.Rows.Add(new object[]
+                    {
+                        rv.FechaRegistro,
+                        rv.TipoDocumento,
+                        rv.NumeroDocumento,
+                        rv.MontoTotal,
+                        rv.UsuarioRegistro,
+                        rv.DocumentoCliente,
+                        rv.ApellidoCliente,
+                        rv.CodigoProducto,
+                        rv.NombreProducto,
+                        rv.Categoria,
+                        rv.Precio,
+                        rv.Cantidad,
+                        rv.SubTotal,
+                        rv.DesMetPago
+                    });
+                }
             }
+
         }
 
-        private void btnbuscarcliente_Click(object sender, EventArgs e)
+        private void btnbuscarpor_Click(object sender, EventArgs e)
         {
             string columnaFiltro = ((OpcionCombo)cbobusqueda.SelectedItem).Valor.ToString();
 

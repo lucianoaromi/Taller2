@@ -129,7 +129,7 @@ namespace CapaPresentacion
         {
             //Envia el menu seleccionado y el formulario a mostrar como parametros. "Es necesario castearlo previamente"
             AbrirFormulario((IconMenuItem)sender, new frmUsuarios());
-            //menuusuarios.Image = Properties.Resources.verde;
+            panelclousing();
 
         }
 
@@ -138,29 +138,34 @@ namespace CapaPresentacion
         {
             //Envia el menu seleccionado y el formulario a mostrar como parametros
             AbrirFormulario(menumantenedor, new frmCategoria());
+            panelclousing();
         }
 
         private void submenuproducto_Click(object sender, EventArgs e)
         {
             //Envia el menu seleccionado y el formulario a mostrar como parametros
             AbrirFormulario(menumantenedor, new frmProducto());
+            panelclousing();
         }
 
 
         private void submenuregistrarventa_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menuventas, new frmVentas(usuarioActual));
+            panelclousing();
         }
 
         private void submenuverdetalleventa_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menuventas, new frmDetalleVenta());
+            panelclousing();
         }
 
 
         private void menuclientes_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new frmClientes());
+            panelclousing();
         }
 
 
@@ -168,35 +173,45 @@ namespace CapaPresentacion
         private void menuverdetalleventa_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new frmReportes());
+            panelclousing();
         }
 
 
         private void menubackup_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new frmBackup());
+            panelclousing();
         }
 
         private void menudetalleventa_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menuventas, new frmReportes(usuarioActual));
+            panelclousing();
         }
 
 
         private void menuestadisticas_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new frmGraficos());
+            panelclousing();
         }
 
         private void submenucategoria_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario(menuventas, new frmCategoria());
+            panelclousing();
         }
 
- //---------------------------------------------------------------------------------------------
         
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             AbrirFormulario(menuventas, new frmReportes(usuarioActual));
+            panelclousing();
+        }
+
+        private void panelclousing()
+        {
+            panelvista.Visible = false;
         }
 
     }
